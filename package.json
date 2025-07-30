@@ -1,0 +1,23 @@
+{
+  "name": "ertl_cypress_academy",
+  "version": "1.0.0",
+  "description": "Testovací projekt Cypress pro akademii",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LenkaErtl/Ertl_cypress_academy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LenkaErtl/Ertl_cypress_academy/issues"
+  },
+  "homepage": "https://github.com/LenkaErtl/Ertl_cypress_academy#readme",
+  "devDependencies": {
+    "cypress": "^14.5.3"
+  }
+}
