@@ -8,6 +8,7 @@ export class LoginPage {
     this.passwordInput = "#password";
     this.loginButton = ".btn";
     this.passwordForgottenAnchor = "#forget_password";
+    this.pageHeader = "h3";
   }
 
   openPmtool() {
@@ -39,5 +40,9 @@ export class LoginPage {
   clickPasswordForgotten() {
     cy.get(this.passwordForgottenAnchor).click();
     return new LostPasswordPage();
+  }
+  pageHeaderHasText(headerText) {
+    cy.get(this.pageHeader).should("have.text", headerText);
+    return this;
   }
 }
