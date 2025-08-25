@@ -7,6 +7,7 @@ module.exports = defineConfig({
     },
 
     env: {
+      // ? Alternativa k cypress.env.json
       testVar: "Toto je proměnná",
     },
     watchForFileChanges: false,
