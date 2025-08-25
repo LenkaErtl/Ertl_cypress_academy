@@ -1,12 +1,14 @@
-import { ProjectsPage } from "./project_page";
+import { HeaderSection } from "./common/header_section.js";
+import { CreateNewProjectModal } from "./create_new_project_modal.js";
 
-export class ProjectPage {
+export class ProjectsPage extends HeaderSection {
   constructor() {
-    this.addProjectButton = 'button[data-testid="Add Project"]';
+    super();
+    this.addProjectButton = 'button[test_id="Add Project"]';
   }
 
   clickAddProject() {
     cy.get(this.addProjectButton).click();
-    return new ProjectPage();
+    return new CreateNewProjectModal();
   }
 }
