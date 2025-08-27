@@ -23,6 +23,7 @@
     "cypress": "^14.5.3"
   },
   "dependencies": {
+    "cypress-real-events": "^1.14.0",
     "moment": "^2.30.1"
   }
 }
