@@ -1,7 +1,12 @@
 import { LoginPage } from "../../page-objects/pmtool/login_page";
 
-describe("Login Page Atomic Tests", () => {
-  beforeEach(() => {
+describe("Exercise: Disabled isolation", { testIsolation: false }, () => {
+  before(() => {
+    // ? Namísto beforeEach používáme before (chceme se přihlásit jen před prvním testem)
+    // ? Před začátkem testů musíme vyčistit Cypress data a cache, jinak se nám díky vypnuté izolaci mohou do testu dostat data nebo stránky z předchozích testů.
+    cy.clearAllCookies();
+    cy.clearAllLocalStorage();
+    cy.clearAllSessionStorage();
     new LoginPage().openPmtool();
   });
 
@@ -92,6 +97,7 @@ describe("Login Page Atomic Tests", () => {
   context("Functionalities Tests", () => {
     it("Successful Login", () => {
       const loginPage = new LoginPage();
+      cy.get("#username").clear();
       loginPage
         .typeUsername(Cypress.env("pmtool_username"))
         .typePassword(Cypress.env("pmtool_password"))
@@ -100,7 +106,12 @@ describe("Login Page Atomic Tests", () => {
     });
 
     it("Unsuccessful Login", () => {
+      cy.clearAllCookies();
+      cy.clearAllLocalStorage();
+      cy.clearAllSessionStorage();
       const loginPage = new LoginPage();
+      loginPage.openPmtool();
+      cy.get("#username").should("be.visible");
       loginPage.typeUsername("ABCD").typePassword("EFGH").clickLogin();
       loginPage.alertDiv.isVisible();
       loginPage.alertDiv.containsText("No match for Username and/or Password.");
