@@ -1,8 +1,10 @@
+import { BasePage } from "./common/base_page";
 import { LoginPage } from "./login_page";
 import { LostPasswordTransfer } from "./lost_password_transfer";
 
-export class LostPasswordPage {
+export class LostPasswordPage extends BasePage {
   constructor() {
+    super("module=users/restore_password");
     this.emailInput = ":nth-child(3) > .input-icon > .form-control";
     this.usernameInput = ":nth-child(2) > .input-icon > .form-control";
     this.sendButton = ".btn-info";

@@ -8,7 +8,10 @@ export class LoginPage {
     this.passwordInput = "#password";
     this.loginButton = ".btn";
     this.passwordForgottenAnchor = "#forget_password";
-    this.pageHeader = "h3";
+    this.pageHeader = "h3.form-title";
+    this.logo = ".login-page-logo img";
+    this.rememberMeCheckbox = ".checkbox";
+    this.alertDiv = ".alert";
   }
 
   openPmtool() {
