@@ -3,7 +3,7 @@ import { CreateNewProjectModal } from "./create_new_project_modal.js";
 
 export class ProjectsPage extends HeaderSection {
   constructor() {
-    super();
+    super("module=items/items&path=21");
     this.addProjectButton = 'button[test_id="Add Project"]';
   }
 

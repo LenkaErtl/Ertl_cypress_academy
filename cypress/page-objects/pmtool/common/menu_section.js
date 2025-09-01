@@ -1,5 +1,8 @@
-export class MenuSection {
-  constructor() {
+import { BasePage } from "./base_page.js";
+
+export class MenuSection extends BasePage {
+  constructor(path) {
+    super(path);
     this.projectLink = "#Projects";
     this.dashboardLink = "#dashboard";
   }
