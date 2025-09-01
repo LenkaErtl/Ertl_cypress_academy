@@ -1,4 +1,4 @@
-import { LoginPage } from "../../../page-objects/pmtool/login_page";
+import { LoginPage } from "../../page-objects/pmtool/login_page";
 
 describe("Login Page Atomic Tests", () => {
   let loginPage;
