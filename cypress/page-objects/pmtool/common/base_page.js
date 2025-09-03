@@ -8,4 +8,3 @@ export class BasePage {
     cy.visit(this.baseUrl + this.path);
   }
 }
-
