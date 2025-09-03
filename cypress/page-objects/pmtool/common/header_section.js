@@ -1,11 +1,11 @@
-import { LoginPage } from "../login_page.js";
 import { MenuSection } from "./menu_section.js";
 
 export class HeaderSection extends MenuSection {
-  constructor(path) {
+  constructor(path = "") {
     super(path);
     this.profileButton = "#user_dropdown";
     this.logoutButton = "#logout";
+    this.logoSelector = "#logo > a > img";
   }
 
   clickProfile() {
@@ -16,5 +16,11 @@ export class HeaderSection extends MenuSection {
   clickLogout() {
     cy.get(this.logoutButton).click();
     return new LoginPage();
+  }
+
+  clickLogo() {
+    const { HomePage } = require("../../eshop/home_page");
+    cy.get(this.logoSelector).click();
+    return new HomePage();
   }
 }

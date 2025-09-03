@@ -1,4 +1,4 @@
-import { HeaderSection } from "../common/header_section";
+import { HeaderSection } from "../common/header_section.js";
 
 export class ProjectsTasksPage extends HeaderSection {
   constructor(projectId = "") {
