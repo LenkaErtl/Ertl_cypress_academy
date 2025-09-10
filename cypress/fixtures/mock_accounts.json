@@ -1,0 +1,18 @@
+[
+  {
+    "_id": "6626f7f13fcf6b9a1fc88191",
+    "userId": 123,
+    "accountId": "456",
+    "balance": 123000000,
+    "transactionLimits": {
+      "dailyLimit": 100000,
+      "monthlyLimit": 5841,
+      "_id": "6626f7f13fcf6b9a1fc88192"
+    },
+    "accountType": "Mockujeme jako bozi",
+    "loginHistory": [],
+    "transactionHistory": [],
+    "createdAt": "1954-01-25T23:51:13:095Z",
+    "__v": 0
+  }
+]
