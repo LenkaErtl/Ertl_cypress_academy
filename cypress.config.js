@@ -8,6 +8,8 @@ module.exports = defineConfig({
     env: {
       // ? Alternativa k cypress.env.json
       testVar: "Toto je proměnná",
+      username: "cypress_zima_2024", // ✅ přidáno
+      password: "Zima2024Cypress", // ✅ přidáno
       pmtool_url: "https://tredgate.com/pmtool",
       tegb_url: "http://localhost:3001/",
       tegb_api_url: "http://localhost:3000/",

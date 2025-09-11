@@ -1,6 +1,7 @@
 import { customElement } from "../../helpers/custom_element";
 import { DashboardPage } from "./dashboard_page";
 import { LostPasswordPage } from "./lost_password_page";
+import { ProjectsPage } from "./project_page";
 
 export class LoginPage {
   constructor() {
@@ -50,5 +51,10 @@ export class LoginPage {
   pageHeaderHasText(headerText) {
     this.pageHeader.haveText(headerText);
     return this;
+  }
+  // NOVÁ METODA pro kliknutí na Projects
+  clickProjectLink() {
+    cy.get("#Projects").click(); // nebo cy.contains("a", "Projects").click();
+    return new ProjectsPage(); // konstruktor ověří nadpis
   }
 }
