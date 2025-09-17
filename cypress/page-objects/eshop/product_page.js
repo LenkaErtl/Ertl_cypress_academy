@@ -1,4 +1,4 @@
-import { HeaderSection } from "../pmtool/common/header_section";
+import { HeaderSection } from "../pmtool/common/header_section"; // měla bych vytvořit EshopHeaderSection
 
 export class ProductPage extends HeaderSection {
   constructor() {
