@@ -3,7 +3,7 @@
 
 describe("Operating with Cypress", () => {
   it("Login Test", () => {
-    //it.only("Login Test", () => { // ? only spustí jen tento test - používat jen pro vývoj
+    //it.only("Login Test", () => { // ? only spustí jen tento test - používat pouze pro vývoj
     cy.visit("https://tredgate.com/pmtool");
     cy.get("#username").type("cypress_zima_2024");
     cy.get("#password").type("Zima2024Cypress");
@@ -16,11 +16,3 @@ describe("Operating with Cypress", () => {
     cy.get("#username2").type("cypress_zima_2024");
   });
 });
-
-/*
-
-Rozšiř náš test Login test v operating_with_cypress_tests.cy.js o vyplnění hesla (jakýkoliv text).
-
-Heslo: Zima2024Cypress
-
-*/

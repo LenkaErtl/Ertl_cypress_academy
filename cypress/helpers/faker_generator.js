@@ -5,7 +5,7 @@ export const user = {
   lastName: faker.person.lastName(),
   email: faker.internet.email(),
 
-  // ✅ Login name: čistě alfanumerický, 10 znaků
+  // Login name: čistě alfanumerický, 10 znaků
   loginname: faker.string.alphanumeric(10), // např. "Lenka123xy"
 
   telephone: faker.phone.number("#########"),

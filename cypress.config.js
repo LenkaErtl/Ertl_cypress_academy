@@ -5,10 +5,10 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
+    experimentalOriginDependencies: true,
     env: {
+      // ? Alternativa k cypress.env.json
       testVar: "Toto je proměnná",
-      username: "cypress_zima_2024",
-      password: "Zima2024Cypress",
       pmtool_url: "https://tredgate.com/pmtool",
       tegb_url: "http://localhost:3001/",
       tegb_api_url: "http://localhost:3000/",
@@ -18,8 +18,5 @@ module.exports = defineConfig({
     },
     watchForFileChanges: false,
     defaultCommandTimeout: 10000,
-    pageLoadTimeout: 1000, //  Tohle je ta klíčová změna
-    video: false,
-    chromeWebSecurity: false,
   },
 });
